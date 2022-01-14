@@ -1,0 +1,115 @@
+html, body {
+    background-color: black;
+    background-clip: border-box;
+    z-index: -1;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.space {
+    position: absolute;
+    margin:0;
+    background: url("images/space.png") ;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.planet-area {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.planet {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin-left: -10px;
+    margin-bottom: -10px;
+    z-index: 2;
+}
+
+.rocket {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    left: 270px;
+    bottom: 270px;
+    transform: rotate(30deg);
+    z-index: 1;
+    animation-duration: 7s;
+}
+
+@keyframes flying {
+    0%   {left:270px; bottom:270px;}
+    100% {left:800px; bottom:800px;}
+}
+
+.control-panel {
+    background:linear-gradient(27deg, darkcyan, lightseagreen);
+    border-radius: 20px;
+    width: 420px;
+    height: 420px;
+    display: flex;
+    position: absolute;
+    right:20px;
+    bottom: 10vh;
+}
+
+.control-panel__inner {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+}
+
+.tb{
+    border-color: red;
+    border-radius: 10px;
+    border-width: 3px;
+    color: yellow;
+    width: 85%;
+    margin:auto;
+    background-color: darkslategray;
+}
+
+input[type='button'] {
+    width: 75px;
+    margin: auto;
+    font-weight: 900;
+    border-radius:10px;
+}
+
+input[type='checkbox']{
+    width:30px;
+    height:30px;
+    border-radius:5px;
+}
+
+.check-buttons, .levers {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 90%;
+}
+
+.levers {
+    height: 200px;
+}
+
+.levers > input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 15%;
+    -webkit-appearance: slider-vertical;
+}
+
+#but2{
+    height: 30px;
+    border-radius: 50%;
+}
+
